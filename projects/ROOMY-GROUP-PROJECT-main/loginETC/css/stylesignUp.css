@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form {
+    background: rgb(165,42,42);
+    background: linear-gradient(0deg, beige 10%, brown 100%);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px ;
+    height: 780px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+input {
+    width: calc(100%);
+    padding: 13px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.password-checkbox {
+    position: absolute;
+    top: 25%;
+    right: 0%;
+    left: 45%;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: brown;
+    color: #fff;
+    padding: 13px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: beige;
+    border-color: brown;
+    border-width: 2px;
+    border-style: solid;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    align-self: flex-start; 
+    margin-top: 20px;
+}
+
+.checkbox-label input:checked {
+    background-color: #4CAF50;
+}
+
+.checkbox-label:hover input {
+    border-color: #666;
+}
+
+.tc {
+    text-decoration: underline;
+}
+
+.tc:hover {
+    color: brown;
+}
+
+
+
+
+

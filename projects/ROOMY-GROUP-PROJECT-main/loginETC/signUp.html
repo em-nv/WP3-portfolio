@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up for Roomy</title>
+    <link rel="stylesheet" href="../css/stylesignUp.css">
+</head>
+<body>
+    <a href="login.html" class="back-button">&larr;</a>
+
+<form action="#" method="post">
+
+    <img src="../images/logo/logo.PNG" alt="Roomy Logo" style="display: block; margin: 0 auto; max-width: 40%;" />
+
+    <h2 style="text-align: center; margin-top: 20px;">Sign Up for Roomy</h2>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Create Password:</label>
+    <div class="password-container">
+        <input type="password" id="password" name="password" required>
+        <input type="checkbox" class="password-checkbox" onclick="togglePassword('password')">
+    </div>
+
+    <label for="confirmPassword">Re-enter Password:</label>
+    <div class="password-container">
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <input type="checkbox" class="password-checkbox" onclick="togglePassword('confirmPassword')">
+    </div>
+
+    <label class="checkbox-label" for="emailUpdatesCheckbox">
+        <input type="checkbox" id="emailUpdatesCheckbox" name="emailUpdatesCheckbox">
+        I don’t want to receive emails about Roomy and related intuit product and feature updates, marketing best practices, and promotions from Roomy.
+    </label>
+
+    <p style="text-align: center;">By creating an account, you agree to our <a href="termsandConditions.html" class="tc">Terms and Conditions.</a></p><br>
+    <button type="submit"><a href="../index.html">Sign Up</a></button>
+</form>
+
+<script>
+    function togglePassword(fieldId) {
+        var field = document.getElementById(fieldId);
+        if (field.type === "password") {
+            field.type = "text";
+        } else {
+            field.type = "password";
+        }
+    }
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

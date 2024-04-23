@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body>
+    <header class="headerStyle">
+      <div class="search-container">
+        <div class="search-box">
+          <input type="text" placeholder="Type to search..">
+          <div class="search-icon">
+              <i class="fas fa-search"></i>
+          </div>
+              <div class="cancel-icon">
+              <i class="fas fa-times"></i>
+          </div>
+          <div class="search-data">
+          </div>
+      </div>
+      <script>
+        const searchBox = document.querySelector(".search-box");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const searchInput = document.querySelector("input");
+        const searchData = document.querySelector(".search-data");
+        searchBtn.onclick =()=>{
+          searchBox.classList.add("active");
+          searchBtn.classList.add("active");
+          searchInput.classList.add("active");
+          cancelBtn.classList.add("active");
+          searchInput.focus();
+          /*
+          if(searchInput.value != ""){
+            var values = searchInput.value;
+            searchData.classList.remove("active");
+            searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+          }else{
+            searchData.textContent = "";
+          }
+          */
+        }
+        cancelBtn.onclick =()=>{
+          searchBox.classList.remove("active");
+          searchBtn.classList.remove("active");
+          searchInput.classList.remove("active");
+          cancelBtn.classList.remove("active");
+          searchData.classList.toggle("active");
+          searchInput.value = "";
+        }
+      </script>
+      </div>
+
+      <div class="logo">    
+        <img src="images/logo/roof.png">
+        <h2 class="headerText">ROOMY</h2>
+      </div>
+    </header>
+
+    <div class="SideMenu">
+      <nav>
+        <ul>
+            <li><a href="index.html">
+                <i class="fas fa-home"></i>
+                <span class="nav-item">Home</span>
+            </a></li>
+            <li><a href="loginETC/profile.html">
+                <i class="fas fa-user"></i>
+                <span class="nav-item">Profile</span>
+            </a></li>
+            <li><a href="notifications.html">
+                <i class="fas fa-bell"></i>
+                <span class="nav-item">Notification</span>
+            </a></li>
+            <li><a href="#">
+                <i class="fas fa-comments"></i>
+                <span class="nav-item">Chats</span>
+            </a></li>
+            <li><a href="helpAndSupport.html">
+                <i class="fas fa-question-circle"></i>
+                <span class="nav-item">Help & Support</span>
+            </a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="upperContent">
+        <div class="upperLeftContent">
+          <h2>Welcome to Roomy - Your Gateway to Exceptional Apartments</h2>
+          <p>
+            At Roomy, we believe that finding the perfect apartment should be an effortless and enjoyable experience. We understand the significance of discovering a space that resonates with your lifestyle, and that's why we've crafted a platform dedicated to simplifying the apartment hunting and reservation process.
+          </p>
+
+        </div>
+        <div class="upperRightContent">
+          <img src="images/27.jpg" />
+        </div>
+      </div>
+      <div class="upperContent">
+        <div class="upperLeftContent">
+            <h2>Our Mission</h2>
+            <p>
+              At Roomy, we believe that finding the perfect apartment should be an effortless and enjoyable experience. We understand the significance of discovering a space that resonates with your lifestyle, and that's why we've crafted a platform dedicated to simplifying the apartment hunting and reservation process.
+            </p>
+        </div>
+        <div class="upperRightContent">
+          <img src="images/10.jpg" />
+        </div>
+      </div>
+      <div class="upperContent">
+        <div class="upperLeftContent">
+            <h2>Discover Your Perfect Space</h2>
+            <p>
+                Roomy brings together a comprehensive collection of apartments available in your area, providing you with an extensive array of options to explore. Our user-friendly interface allows you to seamlessly navigate through different listings, filtering by location, size, amenities, and budget. With detailed descriptions, high-quality images, and virtual tours, you can get a real feel for each apartment from the comfort of your screen.
+            </p>
+        </div>
+        <div class="upperRightContent">
+          <img src="images/2.jpg" />
+        </div>
+      </div>
+      <div class="upperContent">
+        <div class="upperLeftContent">
+            <h2>Easy Reservation Process</h2>
+            <p>
+                Once you've found your dream apartment, our platform simplifies the reservation process. Through Roomy, you can easily schedule visits, communicate with landlords or property managers, and reserve your chosen space hassle-free. Our goal is to make sure that your transition into your new home is as smooth as possible.
+            </p>
+        </div>
+        <div class="upperRightContent">
+          <img src="images/11.jpg" />
+        </div>
+      </div>
+      <div class="upperContent">
+        <div class="upperLeftContent">
+            <h2>Why Choose Roomy?</h2>
+            <ul>
+                <li><b>Extensive Selection:</b> Access to a diverse range of apartments, catering to various preferences and needs.</li>
+                <li><b>Convenience:</b> Effortlessly locate, explore, and reserve apartments all in one place.</li>
+                <li><b>Transparency:</b> Clear and detailed information provided for each listing to help you make informed decisions.</li>
+                <li><b>Supportive Community:</b> A platform designed with your convenience and satisfaction in mind, backed by our dedicated support team.</li>
+            </ul>
+            <p>
+                At Roomy, we're dedicated to revolutionizing the apartment-hunting experience, making it more convenient, transparent, and enjoyable for our users. Your quest for the perfect apartment starts here. Welcome to Roomy - Where Your Ideal Home Awaits.
+            </p>
+            <div class="aboutUs-BottomButtons">
+              <button><a href="loginETC/logIn.html">Let's Get Started</a></button>
+            </div>
+        </div>
+        <div class="upperRightContent">
+          <img src="images/44.jpg" />
+        </div>
+        
+      </div>
+
+     
+    </div>
+    <footer>
+        <p>Designed and Created by: <u>Nieva, Hije, Villaroya</u> | BSIT 2A | Copyright © 2023</p>
+    </footer>
+  </body>
+</html>

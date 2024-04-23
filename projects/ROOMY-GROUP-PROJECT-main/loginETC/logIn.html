@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="../css/stylelogIn.css">
+
+</head>
+<body>
+
+<div class="login-image">
+    <!-- Add your image source and alt text -->
+    <img src="../images/logo/logo.png" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 10px;">
+    <h1>Roomy</h1>
+    <p>"Where Comfort Meets Space"</p>
+</div>
+
+<div class="login-container">
+    <h2 style="margin-top: 60px; margin-bottom: 40px; color: black;">Login</h2>
+    <form class="login-form">
+        <div class="form-group">
+            <label for="username" style="color:black;"><b>Username:</b></label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password" style="margin-top: 50px; color: black;"><b>Password:</b></label>
+            <input type="password" id="password" name="password" required>
+            <div class="show-password-checkbox">
+                <input type="checkbox" id="show-password" onclick="togglePassword()">
+            </div>
+            <div class="forgot-password">
+                <a href="forgotPassword.html">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" style="margin-top: 20px; "><a href="../index.html">Login</a></button>
+            <p><br><br>Don't have an Account?</p>
+            <button type="submit"><a href="signUp.html">Sign Up</a></button>
+        </div>
+    </form>
+</div>
+
+<script>
+  function togglePassword() {
+      var passwordInput = document.getElementById("password");
+      var showPasswordCheckbox = document.getElementById("show-password");
+
+      passwordInput.type = showPasswordCheckbox.checked ? "text" : "password";
+  }
+</script>
+<script src="script.js"></script>
+</body>
+</html>

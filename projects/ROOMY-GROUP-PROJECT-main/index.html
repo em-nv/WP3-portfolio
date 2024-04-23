@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HOME</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body>
+    <header class="headerStyle">
+      <div class="search-container">
+          <div class="search-box">
+            <input type="text" placeholder="Type to search..">
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+                <div class="cancel-icon">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="search-data">
+            </div>
+          </div>
+        <script>
+          const searchBox = document.querySelector(".search-box");
+          const searchBtn = document.querySelector(".search-icon");
+          const cancelBtn = document.querySelector(".cancel-icon");
+          const searchInput = document.querySelector("input");
+          const searchData = document.querySelector(".search-data");
+          searchBtn.onclick =()=>{
+            searchBox.classList.add("active");
+            searchBtn.classList.add("active");
+            searchInput.classList.add("active");
+            cancelBtn.classList.add("active");
+            searchInput.focus();
+            /*
+            if(searchInput.value != ""){
+              var values = searchInput.value;
+              searchData.classList.remove("active");
+              searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+            }else{
+              searchData.textContent = "";
+            }
+            */
+          }
+          cancelBtn.onclick =()=>{
+            searchBox.classList.remove("active");
+            searchBtn.classList.remove("active");
+            searchInput.classList.remove("active");
+            cancelBtn.classList.remove("active");
+            searchData.classList.toggle("active");
+            searchInput.value = "";
+          }
+        </script>
+      </div>
+      
+      <div class="logo">    
+        <img src="images/logo/roof.png">
+        <h2 class="headerText">ROOMY</h2>
+      </div>
+
+    </header>
+
+    <div class="SideMenu">
+      <nav>
+        <ul>
+            <li><a href="index.html">
+                <i class="fas fa-home"></i>
+                <span class="nav-item">Home</span>
+            </a></li>
+            <li><a href="loginETC/profile.html">
+                <i class="fas fa-user"></i>
+                <span class="nav-item">Profile</span>
+            </a></li>
+            <li><a href="notifications.html">
+                <i class="fas fa-bell"></i>
+                <span class="nav-item">Notification</span>
+            </a></li>
+            <li><a href="chats.html">
+                <i class="fas fa-comments"></i>
+                <span class="nav-item">Chats</span>
+            </a></li>
+            <li><a href="helpAndSupport.html">
+                <i class="fas fa-question-circle"></i>
+                <span class="nav-item">Help & Support</span>
+            </a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="container">
+      <div class="upperContent">
+        <div class="upperLeftContent">
+          <h2>Discover Your Perfect Home with Roomy</h2>
+          <p>
+            Browse through a diverse collection of apartments, explore detailed listings, and effortlessly reserve your ideal space. Simplifying the hunt for your dream apartment, one click away. Find out more about how Roomy can elevate your housing search today.
+          </p><br>
+          <button><a href="aboutUs.html">Learn More ></a></button>
+        </div>
+        <div class="upperRightContent">
+          <img src="images/Picture1.jpg" />
+        </div>
+      </div>
+
+      <div class="lowerContent">
+        <h2>Explore exceptional apartments</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+          maiores labore. Voluptate quia perferendis vero nulla tempore deleniti
+          adipisci repellendus excepturi pariatur accusantium. Quasi totam
+          quisquam ullam itaque odio ipsa.
+        </p>
+        <div class="container2">
+          <div class="cardHolder">
+            <a href="abcApartment.html">
+              <div class="card">
+                <img src="images/1.jpg" />
+                <div class="cardContent">
+                  <h3>ABC Apartment</h3>
+                  <div class = "stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <button><a href="abcApartment.html">More ></a></button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cardHolder">
+            <a href="defApartment.html">
+              <div class="card">
+                <img src="images/12.jpg" />
+                <div class="cardContent">
+                  <h3>DEF Apartment</h3>
+                  <div class = "stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <button><a href="defApartment.html">More ></a></button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cardHolder">
+            <a href="ghiApartment.html">
+              <div class="card">
+                <img src="images/34.jpg" />
+                <div class="cardContent">
+                  <h3>GHI Apartment</h3>
+                  <div class = "stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <button><a href="ghiApartment.html">More ></a></button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cardHolder">
+            <a href="jklApartment.html">
+              <div class="card">
+                <img src="images/27.jpg" />
+                <div class="cardContent">
+                  <h3>JKL Apartment</h3>
+                  <div class = "stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <button><a href="jklApartment.html">More ></a></button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cardHolder">
+            <a href="mnoApartment.html">
+              <div class="card">
+                <img src="images/15.jpg" />
+                <div class="cardContent">
+                  <h3>MNO Apartment</h3>
+                  <div class = "stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <button><a href="mnoApartment.html">More ></a></button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cardHolder">
+            <a href="pqrApartment.html">
+              <div class="card">
+                <img src="images/16.jpg" />
+                <div class="cardContent">
+                  <h3>PQR Apartment</h3>
+                  <div class = "stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <button><a href="pqrApartment.html">More ></a></button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cardHolder">
+            <a href="stuApartment.html">
+              <div class="card">
+                <img src="images/31.jpg" />
+                <div class="cardContent">
+                  <h3>STU Apartment</h3>
+                  <div class = "stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <button><a href="stuApartment.html">More ></a></button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cardHolder">
+            <a href="vwxApartment.html">
+              <div class="card">
+                <img src="images/33.jpg" />
+                <div class="cardContent">
+                  <h3>VWX Apartment</h3>
+                  <div class = "stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <button><a href="vwxApartment.html">More ></a></button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+        <p>Designed and Created by: <u>Nieva, Hije, Villaroya</u> | BSIT 2A | Copyright © 2023</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,675 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    color:black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header, footer {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    justify-content: space-between;
+    padding-right: 4%;
+}
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+.logo img{
+    float: left;
+    height: 50px;
+}
+.headerText{
+    font-weight: bold;
+}
+footer{
+    margin-top: 10%;
+    position: relative;
+    z-index: 1; 
+
+}
+
+footer > p {
+    text-align: center;
+}
+
+button{
+    border-style: none;
+    padding: 8px;
+    border-radius: 5px;
+    width: 35%;
+    cursor: pointer;
+}
+
+/*START OF SEARCH BAR*/
+.search-container{
+    float: right;
+ 
+}
+
+::selection{
+  color: #fff;
+  background: brown;
+}
+.search-box{
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 30px rgba(0,0,0,.2);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box.active{
+  width: 250px;
+}
+.search-box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  outline: none;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.search-box input.active{
+  opacity: 1;
+}
+.search-box input::placeholder{
+  color: #a6a6a6;
+}
+.search-box .search-icon{
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 22px;
+  color: brown;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box .search-icon.active{
+  right: 5px;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  font-size: 20px;
+  background: brown;
+  color: #fff;
+  transform: translateY(-50%) rotate(360deg);
+}
+.search-box .cancel-icon{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box .cancel-icon.active{
+  right: -30px;
+  transform: translateY(-50%) rotate(360deg);
+}
+.search-box .search-data{
+  text-align: center;
+  padding-top: 7px;
+  color: #fff;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+.search-box .search-data.active{
+  display: none;
+}
+/*END OF SEARCH BAR*/
+
+.container{
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: black;
+}
+.upperContent::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.upperContent > div {
+    float: left;
+    padding: 0;
+}
+.upperLeftContent{
+    width: 40%;
+    clear: both;
+}
+
+.upperLeftContent > button{
+    border: 2px solid brown;
+    background-color: brown;
+    color: beige;
+    transition-duration: 0.5s;
+}
+.upperLeftContent > button:hover{
+    background-color: beige;
+    color:brown;
+    border: 2px solid brown;
+}
+.upperLeftContent > button a {
+    text-decoration: none;
+    color: inherit; 
+}
+.upperLeftContent > button:hover a {
+    color: inherit; 
+}
+
+.upperRightContent{
+    width: 60%;
+    display: block;
+    justify-content: center;
+}
+
+.upperRightContent > img {
+    margin-top: 5px;
+    width: 600px;
+    height: 325px;
+    padding: 20px;
+    object-fit: cover;
+}
+
+.lowerContent {
+    margin-top: 40px;
+}
+.lowerContent::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.lowerContent {
+    color: black;
+}
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 0;
+}
+
+/*START OF CARDS*/
+.cardHolder {
+    padding: 20px;
+}
+.card {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+    border-radius: 10px;
+    color: black;
+    width: 100%;
+    background: rgb(165,42,42);
+    background: linear-gradient(0deg, beige 0%, brown 100%);
+    transition-duration: 0.2s;
+}
+.card:hover{
+    border: 2px solid brown;
+    transform: scale(1.1);
+}
+.card > .cardContent{
+    padding: 0px 20px 20px 20px;
+}
+.cardContent {
+    h3{
+        border-bottom: 2px solid brown;
+    }
+    /*START OF STAR RATINGS IN THE INDEX.HTML FILE*/
+    .stars {
+        margin-left: 0;
+    }
+    .checked {
+        color: yellow;
+    }
+    /*END OF STAR RATINGS*/
+}
+
+.cardContent > button {
+    width: 100%;
+    background-color: brown;
+    color: beige;
+    display: block;
+    border: 2px solid brown;
+    transition-duration: 0.2s;
+}
+.cardContent > button:hover {
+    width: 100%;
+    background-color: beige;
+    color: brown;
+    display: block;
+    border: 2px solid brown;
+}
+.cardContent > button a {
+    text-decoration: none;
+    color: inherit; 
+}
+.cardContent > button:hover a {
+    color: inherit; 
+}
+.card > a > img {
+    width: 100%;
+    height: auto;
+    padding: 20px 20px 0px 20px;
+    object-fit: cover;
+}
+/*END OF CARDS*/
+
+
+
+/*START OF ABOUT US BOTTOM BUTTONS*/
+.aboutUs-BottomButtons{
+    text-align: center;
+}
+.aboutUs-BottomButtons button{
+    margin: 5px;
+    background-color: brown;
+    color: beige;
+    border: 2px solid brown;
+    transition-duration: 0.55s;
+    width: 100%;
+}
+.aboutUs-BottomButtons button:hover{
+    margin: 5px;
+    background-color: beige;
+    color: brown;
+    border: 2px solid brown;
+    a{
+        color: brown;
+        font-weight: bold;
+    }
+}
+/*END OF ABOUT US BOTTOM BUTTONS*/
+
+
+/*START OF APARTMENT TWO DIVISION BODY*/
+.appartment-upperLeftContent{
+    width: 40%;
+    clear: both;
+    h2{
+        font-weight: bold;
+    }
+}
+
+.appartment-upperLeftContent > button{
+    border: 2px solid brown;
+    background-color: brown;
+    color: beige;
+    transition-duration: 0.5s;
+}
+.appartment-upperLeftContent > button:hover{
+    background-color: beige;
+    color:brown;
+    border: 2px solid brown;
+}
+.appartment-upperLeftContent > button a {
+    text-decoration: none;
+    color: inherit; 
+}
+.appartment-upperLeftContent > button:hover a {
+    color: inherit; 
+}
+
+.appartment-upperRightContent{
+    width: 60%;
+    display: block;
+    justify-content: center;
+}
+
+.appartment-upperRightContent > img {
+    width: 600px;
+    height: 270px;
+    padding: 5px 0 5px 20px;
+    object-fit: cover;
+}
+/*START OF APARTMENT TWO DIVISION BODY*/
+
+
+
+/*START OF APPARTMENT BOTTOM BUTTONS*/
+.apartment-BottomButtons{
+    text-align: center;
+}
+.apartment-BottomButtons button{
+    margin: 5px;
+    background-color: brown;
+    color: beige;
+    border: 2px solid brown;
+    transition-duration: 0.55s;
+    width: 60%;
+}
+.apartment-BottomButtons button:hover{
+    margin: 5px;
+    background-color: beige;
+    color: brown;
+    border: 2px solid brown;
+    a{
+        color: brown;
+        font-weight: bold;
+    }
+}
+/*END OF APARTMENT BOTTOM BUTTONS*/
+
+
+/*START OF STAR RATINGS*/
+.stars {
+    margin-top: 10px;
+    .fa {
+        font-size: 20px;
+        color: rgb(85, 83, 83);;
+    }
+    .checked {
+        color: brown;
+    }
+}
+
+/*END OF STAR RATINGS*/
+
+
+.apartmentName{
+    font-weight: bold;
+    border-bottom: 5px brown solid;
+}
+.apparmentMainPic {
+    height: 300px;
+    overflow: hidden;
+    img {
+        object-fit:cover;
+        height: 100%;
+        width: 100%;
+        object-position: center -300px;
+    }
+}
+
+.priceAndButton{
+    display: flex;
+    p {
+        margin-right: 20px;
+        margin-top: 10px;
+        font-size: larger;
+        font-weight: bold;
+    }
+}
+
+.bookNowButton {
+    a{
+        color: beige;
+    }
+    button {
+        background-color: brown;
+        width: 100px;
+        border: 2px brown solid;
+        transition-duration: 0.2s;
+    }
+}
+.bookNowButton:hover {
+    a {
+        color: brown;
+    }
+    button {
+        background-color: beige;
+        border: 2px brown solid;
+    }
+}
+
+.location{
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    svg{
+        width: 30px;
+        fill: brown;
+    }
+    p{
+        display: inline-flex;
+        padding-left: 10px;
+    }
+
+}
+
+
+
+
+.mySlides {
+    width: 100%;
+  }
+
+  .w3-content {
+    overflow: hidden;
+    position: relative;
+    button{
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        width: 70px;
+        margin: 10px;
+        background-color: rgba(165, 42, 42, 0.541);
+    }
+    button:hover{
+    
+        background-color: rgba(165, 42, 42, 0.705);
+    }
+    .buttonLeft{
+        left: 0;
+        color: beige;
+    }
+    .buttonRight{
+        right: 0;
+        color: beige;
+    }
+  }
+
+  .slide-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+
+  .pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: #717171;
+  }
+
+
+.floatingMessage{
+    position: fixed;
+    bottom: 20px; /* Adjust to change vertical position */
+    right: 20px; /* Adjust to change horizontal position */
+    padding: 20px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    background-color: brown;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+    svg {
+        height: 25px;
+        fill: beige;
+    }
+}
+
+.imageGalleryText {
+    text-align: center;
+    font-weight: bold;
+    border-top: 3px brown solid;
+}
+
+/*START OF SIDE MENU*/
+.SideMenu{
+    float: left;
+    position: absolute;
+    height: 90%;
+}
+.SideMenu nav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: beige;
+    width: 60px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5); 
+}
+.SideMenu a{
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+.SideMenu .fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 10px;
+}
+.SideMenu .nav-item{
+    color: brown;
+    position: relative;
+    top: 12px;
+    margin-left: 0;
+}
+.SideMenu a:hover{
+   background: brown;
+} 
+.SideMenu nav:hover{
+    width: 250px;
+    transition: all 0.5s ease;
+    color: beige;
+}
+.SideMenu .logout{
+    position: absolute;
+    bottom: 0;
+}
+.SideMenu nav ul li:hover a{
+    color: beige;
+    background-color: brown;
+    .nav-item{
+        color: beige;
+    }
+
+}
+/*END OF SIDE MENU*/
+
+
+/*START OF HELP & SUPPORT CARDS*/
+.HSCard-Holder{
+    margin: 0 auto;
+    padding: 0;
+}
+
+.HSCard{
+    display: inline-flex;
+    width: 30%;
+    height: auto;
+    background-color: brown;
+    color: beige;
+    margin: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+    transition-duration: 0.2s;
+    border: 2px brown solid;
+    
+    svg{
+        width: 50px;
+        fill: beige;
+    }
+    .HSCard-Content{
+        margin: 20px;
+        h4{
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+.HSCard:hover{
+    transform: scale(1.1);
+    background-color: beige;
+    border: 2px brown solid;
+
+    svg {
+        fill: brown;
+    }
+    .HSCard-Content{
+        p, h4 {
+            color: brown;
+        }
+
+    }
+}
+
+/*END OF HELP & SUPPORT CARDS*/
+
+
+/*START OF NOTIFICATION CSS*/
+.notif-container{
+    margin: 0 auto;
+}
+.main-notif-container{
+    width: 100%;
+    color: brown;
+    padding: 25px 20px 25px 20px;
+    margin: 15px;
+    border-radius: 20px;
+    border: 2px brown solid;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+    transition-duration: 0.2s;
+    h3 {
+        font-weight: bold;
+        margin: 0;
+    }
+}
+.main-notif-container:hover{
+    color: beige;
+    background-color: brown;
+    border: 2px brown solid;
+    
+}
+/*END OF NOTIFICATION CSS*/

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Selection</title>
+
+    <!-- Add Font Awesome CSS (make sure to include this in your project) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xrXeWNTsu2zHSD9FS5L9NOtLIm8ufO+WzAp6iBOLUv2os4FZm4eTyOJuXAZ+hth5nUk4e0JHdkwM+EUx3RsK2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/stylechooseAccount.css"> <!-- Link to the external stylesheet -->
+
+</head>
+<body>
+
+    <form action="#" method="post">
+
+        <img src="../images/logo/roof.png" alt="Roomy Logo" style="display: block; margin: 0 auto; max-width: 40%;" />
+        <h2>Choose your account</h2>
+        <br><br>
+
+        <!-- Use a list with clickable items enclosed in a box -->
+        <ul id="accountList">
+            <li onclick="selectAccount('juana_dela_cruz')" class="account-box">
+                <img class="account-icon" src="../images/womanicon.jpg" alt="Man Icon"> Juana dela Cruz <span class="account-arrow"><a href="setupAccount.html" style="text-decoration: none;">&#9658;</a></span>
+            </li><br>
+            <li onclick="selectAccount('sarah_gomez')" class="account-box">
+                <img class="account-icon" src="../images/womanicon.jpg" alt="Woman Icon"> Sarah Gomez <span class="account-arrow"><a href="setupAccount.html" style="text-decoration: none;">&#9658;</a></span>
+            </li><br>
+            <li onclick="selectAccount('ana_luna')" class="account-box">
+                <img class="account-icon" src="../images/womanicon.jpg" alt="Man Icon"> Ana Luna <span class="account-arrow"><a href="setupAccount.html" style="text-decoration: none;">&#9658;</a></span>
+            </li><br>
+            <li onclick="selectAccount('mary_jane_santos')" class="account-box">
+                <img class="account-icon" src="../images/womanicon.jpg" alt="Woman Icon"> Mary Jane Santos <span class="account-arrow"><a href="setupAccount.html" style="text-decoration: none;">&#9658;</a></span>
+            </li><br>
+        </ul>
+
+        <!-- Hidden input to store the selected value -->
+        <input type="hidden" id="selectedAccount" name="selectedAccount">
+
+        <!-- Add a submit button or handle form submission with JavaScript if needed -->
+        <!-- <input type="submit" value="Submit"> -->
+
+    </form>
+
+    <script>
+        // JavaScript function to update the hidden input with the selected value
+        function selectAccount(accountName) {
+            document.getElementById('selectedAccount').value = accountName;
+            // Optionally, submit the form using JavaScript if needed
+            // document.forms[0].submit();
+        }
+    </script>
+
+</body>
+</html>

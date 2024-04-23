@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ABC Apartment</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body>
+
+    <header>
+      <div class="search-container">
+          <div class="search-box">
+            <input type="text" placeholder="Type to search..">
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+                <div class="cancel-icon">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="search-data">
+            </div>
+          </div>
+        <script>
+          const searchBox = document.querySelector(".search-box");
+          const searchBtn = document.querySelector(".search-icon");
+          const cancelBtn = document.querySelector(".cancel-icon");
+          const searchInput = document.querySelector("input");
+          const searchData = document.querySelector(".search-data");
+          searchBtn.onclick =()=>{
+            searchBox.classList.add("active");
+            searchBtn.classList.add("active");
+            searchInput.classList.add("active");
+            cancelBtn.classList.add("active");
+            searchInput.focus();
+            /*
+            if(searchInput.value != ""){
+              var values = searchInput.value;
+              searchData.classList.remove("active");
+              searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+            }else{
+              searchData.textContent = "";
+            }
+            */
+          }
+          cancelBtn.onclick =()=>{
+            searchBox.classList.remove("active");
+            searchBtn.classList.remove("active");
+            searchInput.classList.remove("active");
+            cancelBtn.classList.remove("active");
+            searchData.classList.toggle("active");
+            searchInput.value = "";
+          }
+        </script>
+      </div>
+      
+      <div class="logo">    
+        <img src="images/logo/roof.png">
+        <h2 class="headerText">ROOMY</h2>
+      </div>
+    </header>
+
+    <div class="SideMenu">
+      <nav>
+        <ul>
+            <li><a href="index.html">
+                <i class="fas fa-home"></i>
+                <span class="nav-item">Home</span>
+            </a></li>
+            <li><a href="loginETC/profile.html">
+                <i class="fas fa-user"></i>
+                <span class="nav-item">Profile</span>
+            </a></li>
+            <li><a href="notifications.html">
+                <i class="fas fa-bell"></i>
+                <span class="nav-item">Notification</span>
+            </a></li>
+            <li><a href="chats.html">
+                <i class="fas fa-comments"></i>
+                <span class="nav-item">Chats</span>
+            </a></li>
+            <li><a href="helpAndSupport.html">
+                <i class="fas fa-question-circle"></i>
+                <span class="nav-item">Help & Support</span>
+            </a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="lowerContent">
+        <div class="apparmentMainPic">
+          <img src="images/1.jpg">
+        </div>
+        <h1 class="apartmentName">ABC Apartment</h1>
+        <div class = "stars">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </div>
+        
+        <div class="priceAndButton">
+          <p>Php 7,500 / month</p>
+          <div class="bookNowButton">
+              <button><a href="bookingAndReceipt/abcBookingAndReceipt.html">Book Now</a></button>
+          </div>
+        </div>
+        <div class="location">
+          <svg viewBox="0 0 576 512"><path d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152V422.8c0 9.8-6 18.6-15.1 22.3L416 503V200.4zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6V451.8L32.9 502.7C17.1 509 0 497.4 0 480.4V209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77V504.3L192 449.4V255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+          <p>City Employer's Village, Cabid-An, Sorsogon City</p>
+        </div>
+
+        <div class="upperContent">
+          <div class="appartment-upperLeftContent">
+              <h2>Unit Information</h2>
+                <ul>
+                  <li><strong>Apartment Type:</strong> 1 Bedroom, 1 Bathroom</li>
+                  <li><strong>Size:</strong> 750 sq. ft.</li>
+                  <li><strong>Location:</strong> Downtown Area</li>
+                  <li><strong>Amenities:</strong>
+                    <ul>
+                      <li>Modern Kitchen with Stainless Steel Appliances</li>
+                      <li>Spacious Living Room with Natural Lighting</li>
+                      <li>Cozy Bedroom with Walk-in Closet</li>
+                      <li>Stylish Bathroom with Updated Fixtures</li>
+                      <li>In-unit Washer and Dryer</li>
+                      <li>Access to Fitness Center and Pool</li>
+                    </ul>
+                  </li>
+                  <li><strong>Utilities:</strong> Water and Trash included; Tenant responsible for electricity and internet</li>
+                  <li><strong>Parking:</strong> Assigned Covered Parking Space</li>
+                  <li><strong>Pet Policy:</strong> Small pets allowed with additional deposit and monthly fee</li>
+                  <li><strong>Lease Terms:</strong> 12-month lease preferred</li>
+                  <li><strong>Availability:</strong> Ready for immediate move-in</li>
+                </ul>
+            
+              <h2>Owner's Contact Information</h2>
+                <ul>
+                  <li><strong>Owner Name:</strong> Juan Dela Cruz</li>
+                  <li><strong>Contact Information:</strong>
+                    <ul>
+                      <li><strong>Phone:</strong> 09123456789</li>
+                      <li><strong>Email:</strong> juandelecruz@gmail.com</li>
+                    </ul>
+                  </li>
+                  <li><strong>Address:</strong> City Employer's Village, Cabid-An, Sorsogon City</li>
+                </ul>
+                <div class="apartment-BottomButtons">
+                  <button><a href="bookingAndReceipt/abcBookingAndReceipt.html">Book Now</a></button>
+                </div>
+          </div>
+          <div class="appartment-upperRightContent">
+            <img src="images/1.jpg"/>
+            <img src="images/46.jpg" />
+            <img src="images/9.jpg" />
+          </div>
+        </div>
+
+        <div class="container2">
+          <!--<p>APPLY CONTENTS HERE</p>-->
+        </div>
+      </div>
+      <h2 class="w3-center imageGalleryText">Image Gallery</h2>
+
+      <div class="w3-content w3-display-container">
+        <div class="slide-container">
+          <img class="mySlides" src="images/1.jpg">
+          <img class="mySlides" src="images/2.jpg">
+          <img class="mySlides" src="images/3.jpg">
+          <img class="mySlides" src="images/4.jpg">
+          <img class="mySlides" src="images/5.jpg">
+          <img class="mySlides" src="images/6.jpg">
+          <img class="mySlides" src="images/7.jpg">
+          <img class="mySlides" src="images/8.jpg">
+        </div>
+        <!--
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        -->
+        <button class="buttonLeft" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="buttonRight" onclick="plusDivs(1)">&#10095;</button>
+
+        <div class="pagination">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+          <span class="dot" onclick="currentSlide(8)"></span>
+          <!-- Add more dots for additional slides -->
+        </div>
+      </div>
+      <script>
+        var slideIndex = 0;
+        var timer;
+
+        showSlides();
+
+        function plusDivs(n) {
+          clearTimeout(timer);
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          clearTimeout(timer);
+          showSlides(slideIndex = n - 1);
+        }
+
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var slideContainer = document.querySelector(".slide-container");
+
+          if (slideIndex >= slides.length) {
+            slideIndex = 0;
+          }
+          if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+          }
+
+          var translationValue = -slideIndex * 100;
+
+          slideContainer.style.transform = "translateX(" + translationValue + "%)";
+
+          timer = setTimeout(function () {
+            showSlides(slideIndex += 1);
+          }, 3000);
+
+          // Update active pagination dot
+          var dots = document.getElementsByClassName("dot");
+          for (var i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("active");
+          }
+          dots[slideIndex].classList.add("active");
+        }
+      </script>
+      <div class="floatingMessage">
+        <a href="chats.html">
+          <svg viewBox="0 0 640 512"><path d="M88.2 309.1c9.8-18.3 6.8-40.8-7.5-55.8C59.4 230.9 48 204 48 176c0-63.5 63.8-128 160-128s160 64.5 160 128s-63.8 128-160 128c-13.1 0-25.8-1.3-37.8-3.6c-10.4-2-21.2-.6-30.7 4.2c-4.1 2.1-8.3 4.1-12.6 6c-16 7.2-32.9 13.5-49.9 18c2.8-4.6 5.4-9.1 7.9-13.6c1.1-1.9 2.2-3.9 3.2-5.9zM0 176c0 41.8 17.2 80.1 45.9 110.3c-.9 1.7-1.9 3.5-2.8 5.1c-10.3 18.4-22.3 36.5-36.6 52.1c-6.6 7-8.3 17.2-4.6 25.9C5.8 378.3 14.4 384 24 384c43 0 86.5-13.3 122.7-29.7c4.8-2.2 9.6-4.5 14.2-6.8c15.1 3 30.9 4.5 47.1 4.5c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176zM432 480c16.2 0 31.9-1.6 47.1-4.5c4.6 2.3 9.4 4.6 14.2 6.8C529.5 498.7 573 512 616 512c9.6 0 18.2-5.7 22-14.5c3.8-8.8 2-19-4.6-25.9c-14.2-15.6-26.2-33.7-36.6-52.1c-.9-1.7-1.9-3.4-2.8-5.1C622.8 384.1 640 345.8 640 304c0-94.4-87.9-171.5-198.2-175.8c4.1 15.2 6.2 31.2 6.2 47.8l0 .6c87.2 6.7 144 67.5 144 127.4c0 28-11.4 54.9-32.7 77.2c-14.3 15-17.3 37.6-7.5 55.8c1.1 2 2.2 4 3.2 5.9c2.5 4.5 5.2 9 7.9 13.6c-17-4.5-33.9-10.7-49.9-18c-4.3-1.9-8.5-3.9-12.6-6c-9.5-4.8-20.3-6.2-30.7-4.2c-12.1 2.4-24.7 3.6-37.8 3.6c-61.7 0-110-26.5-136.8-62.3c-16 5.4-32.8 9.4-50 11.8C279 439.8 350 480 432 480z"/></svg>
+        </a>
+      </div>
+    </div>
+    <footer>
+        <p>Designed and Created by: <u>Nieva, Hije, Villaroya</u> | BSIT 2A | Copyright © 2023</p>
+    </footer>
+  </body>
+</html>

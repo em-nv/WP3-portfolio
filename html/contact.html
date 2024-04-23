@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body id="main">
+
+        <!-- <div class="custom-cursor"></div> -->
+
+        <header class="header">
+            <a href="../index.html" class="logo"><span>em</span>.com</a>
+            <nav class="nav-bar">
+                <a href="../index.html" style="--i:1;">Home</a>
+                <a href="about.html" style="--i:2;">About</a>
+                <a href="projects.html" style="--i:3;">Projects</a>
+                <a href="contact.html" class="active" style="--i:4;">Contact</a>
+            </nav>
+        </header>
+
+        <section class="contact">
+            <div class="contact-content">
+                <br>
+                <h1>Contact<span> Me</span></h1>
+                <br>
+                <div class="contact-card-container">
+                    <div class=" contact-card">
+                        <div class="contact-card-content">
+                            <div id="hideShow">
+                                <div class="contact-icon">
+                                    <i class='bx bxl-facebook'></i>
+                                    <p>Emmanuel Nieva</p>                            
+                                </div>
+                                <div class="contact-icon">
+                                    <i class='bx bxs-phone' ></i>
+                                    <p>+63123456789</p>                            
+                                </div>
+                                <div class="contact-icon">
+                                    <i class='bx bx-at'></i>
+                                    <p>eon242432535355@gmail.com</p>                            
+                                </div>
+                                <div class="contact-icon">
+                                    <i class='bx bxs-map-pin' ></i>
+                                    <p>Legazpi City, Albay</p>                            
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button type="button" onclick="myHideShowFunstion()" value="clear">Hide Contact Info</button>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" contact-card">
+                        <div class="contact-card-content">
+                            <form>
+                                <input type="text" id="name-field" placeholder="Name...">
+                                <input type="text" id="email-field" placeholder="Email...">
+                                <textarea type="text" id="message-field" name="firstname" placeholder="Message..."></textarea>
+                            </form>
+                            <a href="#">
+                                <button type="button" onclick="clearFields()" value="clear">Clear</button>
+                            </a>
+                            <a href="#">
+                                <button type="submit">Submit</button>
+                            </a>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-soc-med">
+                <a href="https://www.facebook.com/emmn.nv" title="Facebook"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.instagram.com/emmn.nv/" title="Instagram"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" title="GitHub"><i class='bx bxl-github' ></i></a>
+                <a href="#" title="TikTok"><i class='bx bxl-tiktok'></i></a>
+            </div>
+            <p><i class='bx bx-copyright'></i>Copyright 2024. All rights reserved</p>
+        </footer>
+
+        <div class="floatingMessage" id="changeFontButton" title="Change Fonts">
+            <i class='bx bx-font-family'></i>
+        </div>
+
+        <script>
+            /* JS FOR RESETING INPUT FILEDS */
+            function clearFields(){
+                document.getElementById("name-field").value=""
+                document.getElementById("email-field").value=""
+                document.getElementById("message-field").value=""
+                }
+
+            /*  JS FOR HIDE/SHOW ELEMENTS */
+            function myHideShowFunstion() {
+                var temp = document.getElementById("hideShow");
+                var button = document.querySelector('.buttons button');
+                if (temp.style.display === "none") {
+                    temp.style.display = "block";
+                    button.textContent = "Hide Contact Info";
+                } else {
+                    temp.style.display = "none";
+                    button.textContent = "Show Contact Info";
+                }
+            } function myHideShowFunstion() {
+                var temp = document.getElementById("hideShow");
+                var button = document.querySelector('.buttons button');
+                if (temp.style.display === "none") {
+                    temp.style.display = "block";
+                    button.textContent = "Hide Contact Info";
+                } else {
+                    temp.style.display = "none";
+                    button.textContent = "Show Contact Info";
+                }
+            }
+
+            /* JS FOR FONT CHANGE */
+            var fonts = ["Arial, sans-serif", "Times New Roman, serif", "Courier New, monospace"];
+            var currentFontIndex = 0;
+
+            document.getElementById("changeFontButton").addEventListener("click", function() {
+                var contentDiv = document.getElementById("main");
+                contentDiv.style.fontFamily = fonts[currentFontIndex];
+                currentFontIndex = (currentFontIndex + 1) % fonts.length;
+            });
+        </script>
+
+
+
+
+       <!--  <script>
+            // JavaScript to move the background circle along with the cursor
+            document.addEventListener("mousemove", function(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            var cursor = document.querySelector('.custom-cursor');
+                cursor.style.left = x + 'px';
+                cursor.style.top = y + 'px';
+                cursor.style.display = 'block';
+            });
+
+            // JavaScript to hide the cursor when leaving the page
+            document.addEventListener("mouseleave", function(event) {
+            var cursor = document.querySelector('.custom-cursor');
+                cursor.style.display = 'none';
+            });
+
+            // JavaScript to show the cursor when entering the page
+            document.addEventListener("mouseenter", function(event) {
+            var cursor = document.querySelector('.custom-cursor');
+                cursor.style.display = 'block';
+            });
+
+            // JavaScript to create the click effect
+            document.addEventListener("click", function(event) {
+            var clickEffect = document.createElement('div');
+                clickEffect.classList.add('click-effect');
+                clickEffect.style.left = event.clientX + 'px';
+                clickEffect.style.top = event.clientY + 'px';
+                document.body.appendChild(clickEffect);
+
+            // Remove the click effect after the animation completes
+            setTimeout(function() {
+                clickEffect.remove();
+                }, 500);
+            });
+        </script>
+
+        <script>
+            // JavaScript to move the background circle along with the cursor
+            document.addEventListener("mousemove", function(event) {
+                var x = event.clientX;
+                var y = event.clientY;
+                var cursor = document.querySelector('.custom-cursor');
+                cursor.style.left = x + 'px';
+                cursor.style.top = y + 'px';
+                cursor.style.display = 'block';
+            });
+
+            // JavaScript to hide the cursor when leaving the page
+            document.addEventListener("mouseleave", function(event) {
+                var cursor = document.querySelector('.custom-cursor');
+                cursor.style.display = 'none';
+            });
+
+            // JavaScript to show the cursor when entering the page
+            document.addEventListener("mouseenter", function(event) {
+                var cursor = document.querySelector('.custom-cursor');
+                cursor.style.display = 'block';
+            });
+
+            // JavaScript to create the click effect
+            document.addEventListener("click", function(event) {
+                var clickEffect = document.createElement('div');
+                clickEffect.classList.add('click-effect');
+                clickEffect.style.left = event.clientX + 'px';
+                clickEffect.style.top = event.clientY + 'px';
+                document.body.appendChild(clickEffect);
+
+                // Remove the click effect after the animation completes
+                setTimeout(function() {
+                clickEffect.remove();
+                }, 500); 
+            });
+        </script> -->
+
+
+
+
+
+    </body>
+</html>

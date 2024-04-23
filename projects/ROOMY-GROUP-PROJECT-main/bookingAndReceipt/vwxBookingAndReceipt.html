@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VWX Booking</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/receipt.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body>
+    <header class="headerStyle">
+
+
+      <div class="search-container">
+          <div class="search-box">
+            <input type="text" placeholder="Type to search..">
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+                <div class="cancel-icon">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="search-data">
+            </div>
+          </div>
+        <script>
+          const searchBox = document.querySelector(".search-box");
+          const searchBtn = document.querySelector(".search-icon");
+          const cancelBtn = document.querySelector(".cancel-icon");
+          const searchInput = document.querySelector("input");
+          const searchData = document.querySelector(".search-data");
+          searchBtn.onclick =()=>{
+            searchBox.classList.add("active");
+            searchBtn.classList.add("active");
+            searchInput.classList.add("active");
+            cancelBtn.classList.add("active");
+            searchInput.focus();
+            /*
+            if(searchInput.value != ""){
+              var values = searchInput.value;
+              searchData.classList.remove("active");
+              searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+            }else{
+              searchData.textContent = "";
+            }
+            */
+          }
+          cancelBtn.onclick =()=>{
+            searchBox.classList.remove("active");
+            searchBtn.classList.remove("active");
+            searchInput.classList.remove("active");
+            cancelBtn.classList.remove("active");
+            searchData.classList.toggle("active");
+            searchInput.value = "";
+          }
+        </script>
+      </div>
+
+      <div class="logo">    
+        <img src="../images/logo/roof.png">
+        <h2 class="headerText">ROOMY</h2>
+      </div>
+    </header>
+
+    <div class="SideMenu">
+      <nav>
+        <ul>
+            <li><a href="../index.html">
+                <i class="fas fa-home"></i>
+                <span class="nav-item">Home</span>
+            </a></li>
+            <li><a href="../loginETC/profile.html">
+                <i class="fas fa-user"></i>
+                <span class="nav-item">Profile</span>
+            </a></li>
+            <li><a href="../notifications.html">
+                <i class="fas fa-bell"></i>
+                <span class="nav-item">Notification</span>
+            </a></li>
+            <li><a href="#">
+                <i class="fas fa-comments"></i>
+                <span class="nav-item">Chats</span>
+            </a></li>
+            <li><a href="../helpAndSupport.html">
+                <i class="fas fa-question-circle"></i>
+                <span class="nav-item">Help & Support</span>
+            </a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="container">
+      
+
+      <div class="lowerContent">
+        <h2>Booking Information</h2>
+        <div class="receipt-container">
+            <form id="bookingForm" onsubmit="showReceipt(event)">
+              <div class="form-group">
+                <label for="apartmentName">Apartment Name:</label>
+                <input type="text" id="apartmentName" name="apartmentName" value="VWX Apartment" disabled>
+              </div>
+              <div class="form-group">
+                <label for="checkInDate">Check-in Date:</label>
+                <input type="date" id="checkInDate" name="checkInDate" required>
+              </div>
+              <div class="form-group">
+                <label for="checkOutDate">Check-out Date:</label>
+                <input type="date" id="checkOutDate" name="checkOutDate" required>
+              </div>
+              <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[+0-9]+" title="Please enter a valid Phone Number" required>
+              </div>
+              <div class="form-group">
+                <label for="creditCard">Credit Card Number:</label>
+                <input type="text" id="creditCard" name="creditCard" pattern="[0-9]+" title="Please enter valid CreditCard Number" required>
+              </div>
+              <div class="form-group">
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" required>
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" pattern="[0-9]+" title="Please enter valid CVV" required>
+              </div>
+              <input type="submit" value="Book Now">
+            </form>
+            <div id="receipt">
+              <h1>Receipt</h1>
+              <p><strong>Date & Time of Booking:</strong> <span id="bookingDateTime"></span></p>
+              <p><strong>Apartment Name:</strong> <span id="receiptApartmentName"></span></p>
+              <p><strong>Full Name:</strong> <span id="receiptFullName"></span></p>
+              <p><strong>Email:</strong> <span id="receiptEmail"></span></p>
+              <p><strong>Phone:</strong> <span id="receiptPhone"></span></p>
+              <p><strong>Check-in Date:</strong> <span id="receiptCheckInDate"></span></p>
+              <p><strong>Check-out Date:</strong> <span id="receiptCheckOutDate"></span></p>
+              <p> </p>
+              <p id="ThankYouCenter"> ---THANK YOU FOR TRUSTING ROOMY--- </p>
+              <!-- Other receipt details here -->
+            </div>
+          </div>
+        
+            <script>
+                function showReceipt(event) {
+                    event.preventDefault(); // Prevent form submission
+            
+                    // Retrieve form data
+                    var apartmentName = document.getElementById('apartmentName').value;
+                    var fullName = document.getElementById('fullName').value;
+                    var email = document.getElementById('email').value;
+                    var phone = document.getElementById('phone').value;
+                    var checkInDate = document.getElementById('checkInDate').value;
+                    var checkOutDate = document.getElementById('checkOutDate').value;
+                    // Get other form field values similarly
+            
+                    // Display receipt with form data
+                    document.getElementById('receiptApartmentName').innerText = apartmentName;
+                    document.getElementById('receiptFullName').innerText = fullName;
+                    document.getElementById('receiptEmail').innerText = email;
+                    document.getElementById('receiptPhone').innerText = phone;
+                    document.getElementById('receiptCheckInDate').innerText = checkInDate;
+                    document.getElementById('receiptCheckOutDate').innerText = checkOutDate;
+                    // Set other receipt details similarly
+            
+                    // Display current date and time as booking date and time
+                    var bookingDateTime = new Date().toLocaleString(); // Get current date and time
+                    document.getElementById('bookingDateTime').innerText = bookingDateTime; // Set booking date and time in receipt
+            
+                    document.getElementById('receipt').style.display = 'block'; // Show receipt
+                }
+            </script>
+        <div class="container2">
+          <!-- <p>APPLY CONTENTS HERE</p> -->
+        </div>
+      </div>
+    </div>
+    <footer>
+        <p>Designed and Created by: <u>Nieva, Hije, Villaroya</u> | BSIT 2A | Copyright © 2023</p>
+    </footer>
+  </body>
+</html>

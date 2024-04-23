@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Up Your Account</title>
+    <link rel="stylesheet" href="../css/stylesetupAccount.css">
+</head>
+
+<body>
+
+    <form action="/your-login-endpoint" method="post">
+
+        <img src="../images/logo/logo.PNG" alt="Roomy Logo" style="display: block; margin: 0 auto; max-width: 40%;" />
+        <h1>Set Up Your Account</h1>
+
+        <!-- Woman Icon (You can replace the src attribute with the path to your woman icon) -->
+        <img src="../images/womanicon.jpg" alt="Woman Icon" class="icon">
+
+        <!-- Pre-filled Name -->
+        <p style="text-align: center; font-size: 20px;"><b>Name</b></p>
+        <br><br>
+
+        <!-- Create New Password Field -->
+        <label for="password" style="text-align: left;">Create New Password:</label>
+        <div class="password-container">
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <input type="checkbox" class="password-checkbox" onclick="togglePassword('confirmPassword')">
+        </div>
+    
+        <button type="submit"><a href="../index.html">Log In</a></button>
+
+    </form>
+
+    <script>
+        function togglePassword(fieldId) {
+            var field = document.getElementById(fieldId);
+            if (field.type === "password") {
+                field.type = "text";
+        } else {
+                field.type = "password";
+            }
+        }
+    
+    </script>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

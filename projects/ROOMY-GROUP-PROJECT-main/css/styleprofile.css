@@ -1,0 +1,181 @@
+/*main*/
+.profile-container {
+    text-align: center;
+}
+
+.user-icon {
+    font-size: 60px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.change-password-button {
+    color: black;
+    position: relative;
+    padding: 15px 50px 15px 5px; /* Adjust padding for button size */
+    font-size: 16px;   /* Adjust font size for button text */
+    display: inline-block;
+    width: 300px;
+    text-align: left; /* Align text to the left */
+    border-radius: 8px;
+    background-color: #fff;
+    border: 3px solid brown;
+}
+
+.logout-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: brown;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.logout-button:hover {
+    background-color: beige;
+    border-color: brown;
+    border-width: 2px;
+    border-style: solid;
+    color: black;
+}
+
+.arrow {
+    cursor: pointer;
+    color: red;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+}
+
+.arrow:hover {
+    color: black;
+}
+
+.pic {
+    width: 250px;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 30px;
+    
+}
+/*end main*/
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    color:black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header, footer {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    justify-content: space-between;
+    padding-right: 10%;
+}
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.headerStyle img{
+    margin-top: 10px;
+    float: left;
+    height: 50px;
+}
+.headerText{
+    font-weight: bold;
+}
+footer{
+    position: relative;
+    z-index: 1; 
+}
+
+footer > p {
+    text-align: center;
+}
+
+
+
+/*START OF SIDE MENU*/
+.SideMenu{
+    float: left;
+    position: absolute;
+    height: 85%;
+}
+.SideMenu nav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: beige;
+    width: 60px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5); 
+}
+.SideMenu a{
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+.SideMenu .fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 10px;
+}
+.SideMenu .nav-item{
+    color: brown;
+    position: relative;
+    top: 12px;
+    margin-left: 0;
+}
+.SideMenu a:hover{
+   background: brown;
+} 
+.SideMenu nav:hover{
+    width: 250px;
+    transition: all 0.5s ease;
+    color: beige;
+}
+.SideMenu .logout{
+    position: absolute;
+    bottom: 0;
+}
+.SideMenu nav ul li:hover a{
+    color: beige;
+    background-color: brown;
+    .nav-item{
+        color: beige;
+    }
+
+}

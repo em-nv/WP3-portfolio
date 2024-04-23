@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body id="main">
+
+        <!-- <div class="custom-cursor"></div> -->
+
+        <header class="header">
+            <a href="../index.html" class="logo"><span>em</span>.com</a>
+            <nav class="nav-bar">
+                <a href="../index.html" style="--i:1;">Home</a>
+                <a href="about.html" style="--i:2;">About</a>
+                <a href="projects.html" style="--i:3;" class="active">Projects</a>
+                <a href="contact.html" style="--i:4;">Contact</a>
+            </nav>
+        </header>
+
+        <section class="projects">
+
+            <div class="projects-content">
+                <h1><span>Creations </span>and Collaborations</h1>
+
+                <div class="projects-card-container">
+                    <a href="../projects/WP1/index.html" class="projects-card-link projects-card">
+                        <div >
+                            <img src="../projects/WP1/Screenshot 1.png">
+                            <h3>WP1</h3>
+                        </div>
+                    </a>
+                    <a href="../projects/WP2/index.html" class="projects-card-link projects-card">
+                        <div >
+                            <img src="../projects/WP2/Screenshot 1.png">
+                            <h3>WP2</h3>
+                        </div>
+                    </a>
+                    <a href="../projects/Calendar/Menu.html" class="projects-card-link projects-card">
+                        <div >
+                            <img src="../projects/Calendar/calendar.png">
+                            <h3>Calendar</h3>
+                        </div>
+                    </a>
+                    <a href="../projects/Caroline Scents Inventory/OOP Project Presentation.mp4" class="projects-card-link projects-card">
+                        <div >
+                            <img src="../projects/Caroline Scents Inventory/caroline2.png">
+                            <h3>Inventory</h3>
+                        </div>
+                    </a>
+                    <a href="../projects/SinglePage Web/Nieva.html" class="projects-card-link projects-card">
+                        <div >
+                            <img src="../projects/SinglePage Web/screenshot.png">
+                            <h3>Webpage 1</h3>
+                        </div>
+                    </a>
+                    <a href="../projects/SinglePage Web2/nieva.html" class="projects-card-link projects-card">
+                        <div >
+                            <img src="../projects/SinglePage Web2/screenshot.png">
+                            <h3>Webpage 2</h3>
+                        </div>
+                    </a>
+                    <a href="../projects/ROOMY-GROUP-PROJECT-main/index.html" class="projects-card-link projects-card">
+                        <div >
+                            <img src="../projects/ROOMY-GROUP-PROJECT-main/screenshot.png">
+                            <h3>Roomy Project</h3>
+                        </div>
+                    </a>
+                    <a href="https://www.figma.com/file/maXqHFEzKFhMstj5tKu48D/Roomy-Prototype?type=design&node-id=0%3A1&mode=design&t=qxSXYzSXyYoWoiDo-1" class="projects-card-link projects-card">
+                        <div >
+                            <img src="../projects/figma project.png">
+                            <h3>Figma Prototype</h3>
+                        </div>
+                    </a>                        
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-soc-med">
+                <a href="https://www.facebook.com/emmn.nv" title="Facebook"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.instagram.com/emmn.nv/" title="Instagram"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" title="GitHub"><i class='bx bxl-github' ></i></a>
+                <a href="#" title="TikTok"><i class='bx bxl-tiktok'></i></a>
+            </div>
+            <p><i class='bx bx-copyright'></i>Copyright 2024. All rights reserved</p>
+        </footer>
+
+        <div class="floatingMessage" id="changeFontButton" title="Change Fonts">
+            <i class='bx bx-font-family'></i>
+        </div>
+
+        <script>
+            /* JS FOR FONT CHANGE */
+            var fonts = ["Arial, sans-serif", "Times New Roman, serif", "Courier New, monospace"];
+            var currentFontIndex = 0;
+
+            document.getElementById("changeFontButton").addEventListener("click", function() {
+                var contentDiv = document.getElementById("main");
+                contentDiv.style.fontFamily = fonts[currentFontIndex];
+                currentFontIndex = (currentFontIndex + 1) % fonts.length;
+            });
+        </script>
+
+
+
+        <!-- <script>
+            // JavaScript to move the background circle along with the cursor
+            document.addEventListener("mousemove", function(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            var cursor = document.querySelector('.custom-cursor');
+                cursor.style.left = x + 'px';
+                cursor.style.top = y + 'px';
+                cursor.style.display = 'block';
+            });
+
+            // JavaScript to hide the cursor when leaving the page
+            document.addEventListener("mouseleave", function(event) {
+            var cursor = document.querySelector('.custom-cursor');
+                cursor.style.display = 'none';
+            });
+
+            // JavaScript to show the cursor when entering the page
+            document.addEventListener("mouseenter", function(event) {
+            var cursor = document.querySelector('.custom-cursor');
+                cursor.style.display = 'block';
+            });
+
+            // JavaScript to create the click effect
+            document.addEventListener("click", function(event) {
+            var clickEffect = document.createElement('div');
+                clickEffect.classList.add('click-effect');
+                clickEffect.style.left = event.clientX + 'px';
+                clickEffect.style.top = event.clientY + 'px';
+                document.body.appendChild(clickEffect);
+
+            // Remove the click effect after the animation completes
+            setTimeout(function() {
+                clickEffect.remove();
+                }, 500);
+            });
+        </script>
+
+        <script>
+            // JavaScript to move the background circle along with the cursor
+            document.addEventListener("mousemove", function(event) {
+                var x = event.clientX;
+                var y = event.clientY;
+                var cursor = document.querySelector('.custom-cursor');
+                cursor.style.left = x + 'px';
+                cursor.style.top = y + 'px';
+                cursor.style.display = 'block';
+            });
+
+            // JavaScript to hide the cursor when leaving the page
+            document.addEventListener("mouseleave", function(event) {
+                var cursor = document.querySelector('.custom-cursor');
+                cursor.style.display = 'none';
+            });
+
+            // JavaScript to show the cursor when entering the page
+            document.addEventListener("mouseenter", function(event) {
+                var cursor = document.querySelector('.custom-cursor');
+                cursor.style.display = 'block';
+            });
+
+            // JavaScript to create the click effect
+            document.addEventListener("click", function(event) {
+                var clickEffect = document.createElement('div');
+                clickEffect.classList.add('click-effect');
+                clickEffect.style.left = event.clientX + 'px';
+                clickEffect.style.top = event.clientY + 'px';
+                document.body.appendChild(clickEffect);
+
+                // Remove the click effect after the animation completes
+                setTimeout(function() {
+                clickEffect.remove();
+                }, 500); 
+            });
+        </script> -->
+
+
+
+    </body>
+</html>

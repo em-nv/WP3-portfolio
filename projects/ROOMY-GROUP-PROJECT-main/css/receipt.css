@@ -1,0 +1,51 @@
+  .receipt-container {
+    background-color: white;
+    padding:40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+
+    h1 {
+        color: brown;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      select {
+        width: 40%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"] {
+        background-color: brown;
+        color: beige;
+        padding: 10px 20px;
+        border: 2px solid brown;
+        border-radius: 5px;
+        cursor: pointer;
+        transition-duration: 0.2s;
+      }
+      input[type="submit"]:hover {
+        background-color: beige;
+        color: brown;
+      }
+  }
+  
+  #receipt {
+    display: none;
+    padding:40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  #ThankYouCenter{
+    text-align: center;
+    font-style: italic;
+}

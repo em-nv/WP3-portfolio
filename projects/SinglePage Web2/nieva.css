@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    color:black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header, footer {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.nav-bar, a {
+    text-decoration: none;
+    color: beige;
+    display: block;
+}
+.nav-bar > ul {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+}
+.nav-bar>ul>li>a {
+    padding: 10px;
+    background: brown;
+    font-weight: bold;
+}
+.nav-bar > ul > li > a:hover {
+    background: beige;
+    color: brown;
+    transition: 0.2s;
+}
+.nav-bar li {
+    float: right;
+    width: 11%;
+    text-align: center;
+}
+
+.container{
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: black;
+}
+.upperContent::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.upperContent > div {
+    float: left;
+    padding: 0;
+}
+.upperLeftContent{
+    width: 40%;
+    clear: both;
+}
+
+.upperRightContent{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.btnLearnMore{
+    background-color: brown;
+    display: block;
+    width: 100px;
+    height: 30px;
+    padding: 10px;
+}
+.btnLearnMore > a {
+    text-decoration: none;
+    color: beige;
+
+}
+
+.upperRightContent > img {
+    width: 900px;
+    height: 350px;
+    padding: 20px;
+    object-fit: cover;
+}
+button{
+    background-color: beige;
+    color: brown;
+    border: 2px solid brown;
+    padding: 10px;
+    border-radius: 5px;
+    width: 27%;
+    cursor: pointer;
+}
+button:hover{
+    background-color: brown;
+    color:white;
+    border: 2px solid brown;
+    transition-duration: 1s;
+}
+.lowerContent {
+    margin-top: 70px;
+}
+.lowerContent::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.lowerContent {
+    color: black;
+}
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+.container2 .cardHolder {
+    padding: 10px;
+}
+.container2 .cardHolder .card {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: brown;
+    color: beige;
+}
+.card > img {
+    width: 100%;
+
+}

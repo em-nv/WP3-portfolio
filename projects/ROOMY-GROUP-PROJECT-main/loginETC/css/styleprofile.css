@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: beige;
+}
+
+.profile-container {
+    text-align: center;
+}
+
+.user-icon {
+    font-size: 60px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.change-password-button {
+    color: black;
+    position: relative;
+    padding: 15px 50px 15px 5px; /* Adjust padding for button size */
+    font-size: 16px;   /* Adjust font size for button text */
+    display: inline-block;
+    width: 300px;
+    text-align: left; /* Align text to the left */
+    border-radius: 8px;
+    background-color: #fff;
+    border: 3px solid brown;
+}
+
+.logout-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: brown;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: beige;
+    border-color: brown;
+    border-width: 2px;
+    border-style: solid;
+    color: black;
+}
+
+.arrow {
+    cursor: pointer;
+    color: red;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+}
+
+.arrow:hover {
+    color: black;
+}
+
+.pic {
+    width: 250px;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 30px;
+    
+}
+

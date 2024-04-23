@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../css/styleprofile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <header class="headerStyle">    
+        <img src="../images/logo/roof.png">  
+        <h2 class="headerText">ROOMY</h2>
+    </header>
+  
+      <div class="SideMenu">
+        <nav>
+          <ul>
+              <li><a href="../index.html">
+                  <i class="fas fa-home"></i>
+                  <span class="nav-item">Home</span>
+              </a></li>
+              <li><a href="profile.html">
+                  <i class="fas fa-user"></i>
+                  <span class="nav-item">Profile</span>
+              </a></li>
+              <li><a href="../notifications.html">
+                  <i class="fas fa-bell"></i>
+                  <span class="nav-item">Notification</span>
+              </a></li>
+              <li><a href="../chats.html">
+                  <i class="fas fa-comments"></i>
+                  <span class="nav-item">Chats</span>
+              </a></li>
+              <li><a href="../helpAndSupport.html">
+                  <i class="fas fa-question-circle"></i>
+                  <span class="nav-item">Help & Support</span>
+              </a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <h1 style="text-align: center;">Profile</h1>
+
+    <div class="profile-container">
+        <div class="user-info">
+            <img src="../images/womanicon.jpg" alt="Woman Icon" class="pic">
+            <p class="user-name"><b>Juana dela Cruz</b><br><span style="font-size: 16px;">juanadelacruz@gmail.com</span></p>
+        </div>
+        <br>
+        <div class="button-container">
+            <button class="change-password-button" onclick="changePassword()">
+                Change Password <span class="arrow" onclick="changePasswordArrow()">&#9658;</span>
+            </button>
+        </div>
+
+        <br><br>
+        <div class="button-container">
+            <button class="logout-button" onclick="logout()">Log Out</button>
+        </div>
+    </div>
+
+    <script>
+        function changePasswordArrow() {
+            // Redirect to the change password page
+            window.location.href = 'changePassword.html';
+        }
+
+        function logout() {
+            // Redirect to the login page
+            window.location.href = 'login.html';
+        }
+    </script>
+
+    <footer>
+        <p>Designed and Created by: <u>Nieva, Hije, Villaroya</u> | BSIT 2A | Copyright © 2023</p>
+    </footer>
+</body>
+</html>
