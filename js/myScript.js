@@ -1,6 +1,6 @@
 /* JS FOR TYPING TEXTS */
 var typed = new Typed('#texts', {
-  strings: ['Website Developer.', 'UI/UX Designer.','Lover (kimmy...)'],
+  strings: ['Website Developer.', 'UI/UX Designer.'],
   typeSpeed: 30,
   backSpeed: 30,
   loop: true
